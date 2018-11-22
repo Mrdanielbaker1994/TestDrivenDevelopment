@@ -18,6 +18,7 @@ namespace TestDrivenDevelopment
         static public float Angle_AB { get; set; }
         static public float Angle_BC { get; set; }
         static public float Angle_CA { get; set; }
+        static public float sum_of_angles { get; set; }
 
 
 

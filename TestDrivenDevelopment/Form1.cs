@@ -23,6 +23,10 @@ namespace TestDrivenDevelopment
         {
             Triangles.Area = Triangles.Side_A + Triangles.Side_B + Triangles.Side_C;
             SumOfSidesBox.Text = Triangles.Area.ToString();
+
+            Triangles.sum_of_angles = Triangles.Angle_AB + Triangles.Angle_BC + Triangles.Angle_CA;
+            Sum_Of_Angles_Box.Text = Triangles.sum_of_angles.ToString();
+
         }
 
         private void Side_A_TextChanged(object sender, EventArgs e)
@@ -72,20 +76,20 @@ namespace TestDrivenDevelopment
 
         private void Angle_AB_TextChanged(object sender, EventArgs e)
         {
+            Triangles.Angle_AB = float.Parse(AB_Box.Text);
 
         }
         private void Angle_BC__TextChanged(object sender, EventArgs e)
         {
+            Triangles.Angle_BC = float.Parse(BC_Box.Text);
 
         }
         private void Angle_CA_TextChanged(object sender, EventArgs e)
         {
+            Triangles.Angle_BC = float.Parse(BC_Box.Text);
 
         }
 
-        private void Angle_Submit_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
     }
 }
