@@ -38,6 +38,7 @@ namespace TestDrivenDevelopment
 
         }
 
+
         private void Side_A_TextChanged(object sender, EventArgs e)
         {
             Triangles.Side_A  = float.Parse(Side_Textbox_A.Text);
