@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label Sum;
+            System.Windows.Forms.Label Area_of_Triangle;
             this.Side_Textbox_A = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Side_Textbox_B = new System.Windows.Forms.TextBox();
@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.SumOfSidesBox = new System.Windows.Forms.TextBox();
+            this.AreaOfTriangle = new System.Windows.Forms.TextBox();
             this.Angle_AB_Label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,17 +45,18 @@
             this.BC_Box = new System.Windows.Forms.TextBox();
             this.AB_Box = new System.Windows.Forms.TextBox();
             this.Sum_Of_Angles_Box = new System.Windows.Forms.TextBox();
-            Sum = new System.Windows.Forms.Label();
+            Area_of_Triangle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Sum
+            // Area_of_Triangle
             // 
-            Sum.AutoSize = true;
-            Sum.Location = new System.Drawing.Point(530, 70);
-            Sum.Name = "Sum";
-            Sum.Size = new System.Drawing.Size(130, 25);
-            Sum.TabIndex = 10;
-            Sum.Text = "Area of Sum";
+            Area_of_Triangle.AutoSize = true;
+            Area_of_Triangle.Location = new System.Drawing.Point(530, 70);
+            Area_of_Triangle.Name = "Area_of_Triangle";
+            Area_of_Triangle.Size = new System.Drawing.Size(177, 25);
+            Area_of_Triangle.TabIndex = 10;
+            Area_of_Triangle.Text = "Area_of_Triangle";
+            Area_of_Triangle.Click += new System.EventHandler(this.AreaOfTriangle_Click);
             // 
             // Side_Textbox_A
             // 
@@ -63,7 +64,6 @@
             this.Side_Textbox_A.Name = "Side_Textbox_A";
             this.Side_Textbox_A.Size = new System.Drawing.Size(131, 31);
             this.Side_Textbox_A.TabIndex = 0;
-            this.Side_Textbox_A.TextChanged += new System.EventHandler(this.Side_A_TextChanged);
             // 
             // button1
             // 
@@ -81,7 +81,6 @@
             this.Side_Textbox_B.Name = "Side_Textbox_B";
             this.Side_Textbox_B.Size = new System.Drawing.Size(131, 31);
             this.Side_Textbox_B.TabIndex = 4;
-            this.Side_Textbox_B.TextChanged += new System.EventHandler(this.Side_B_TextChanged);
             // 
             // Side_Textbox_C
             // 
@@ -89,7 +88,6 @@
             this.Side_Textbox_C.Name = "Side_Textbox_C";
             this.Side_Textbox_C.Size = new System.Drawing.Size(131, 31);
             this.Side_Textbox_C.TabIndex = 5;
-            this.Side_Textbox_C.TextChanged += new System.EventHandler(this.Side_C_TextChanged);
             // 
             // label1
             // 
@@ -99,7 +97,6 @@
             this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Side A";
-            this.label1.Click += new System.EventHandler(this.Label_A_Click);
             // 
             // label2
             // 
@@ -109,7 +106,6 @@
             this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Side B";
-            this.label2.Click += new System.EventHandler(this.Label_B_Click);
             // 
             // label3
             // 
@@ -119,15 +115,13 @@
             this.label3.Size = new System.Drawing.Size(76, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Side C";
-            this.label3.Click += new System.EventHandler(this.Label_C_Click);
             // 
-            // SumOfSidesBox
+            // AreaOfTriangle
             // 
-            this.SumOfSidesBox.Location = new System.Drawing.Point(531, 127);
-            this.SumOfSidesBox.Name = "SumOfSidesBox";
-            this.SumOfSidesBox.Size = new System.Drawing.Size(110, 31);
-            this.SumOfSidesBox.TabIndex = 9;
-            this.SumOfSidesBox.TextChanged += new System.EventHandler(this.SumOfSides_TextChanged);
+            this.AreaOfTriangle.Location = new System.Drawing.Point(531, 127);
+            this.AreaOfTriangle.Name = "AreaOfTriangle";
+            this.AreaOfTriangle.Size = new System.Drawing.Size(110, 31);
+            this.AreaOfTriangle.TabIndex = 9;
             // 
             // Angle_AB_Label
             // 
@@ -171,7 +165,6 @@
             this.CA_Box.Name = "CA_Box";
             this.CA_Box.Size = new System.Drawing.Size(119, 31);
             this.CA_Box.TabIndex = 17;
-            this.CA_Box.TextChanged += new System.EventHandler(this.Angle_CA_TextChanged);
             // 
             // BC_Box
             // 
@@ -179,7 +172,6 @@
             this.BC_Box.Name = "BC_Box";
             this.BC_Box.Size = new System.Drawing.Size(131, 31);
             this.BC_Box.TabIndex = 18;
-            this.BC_Box.TextChanged += new System.EventHandler(this.Angle_BC__TextChanged);
             // 
             // AB_Box
             // 
@@ -187,7 +179,6 @@
             this.AB_Box.Name = "AB_Box";
             this.AB_Box.Size = new System.Drawing.Size(131, 31);
             this.AB_Box.TabIndex = 20;
-            this.AB_Box.TextChanged += new System.EventHandler(this.Angle_AB_TextChanged);
             // 
             // Sum_Of_Angles_Box
             // 
@@ -209,8 +200,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Angle_AB_Label);
-            this.Controls.Add(Sum);
-            this.Controls.Add(this.SumOfSidesBox);
+            this.Controls.Add(Area_of_Triangle);
+            this.Controls.Add(this.AreaOfTriangle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -220,7 +211,6 @@
             this.Controls.Add(this.Side_Textbox_A);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +225,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox SumOfSidesBox;
+        private System.Windows.Forms.TextBox AreaOfTriangle;
         private System.Windows.Forms.Label Angle_AB_Label;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
