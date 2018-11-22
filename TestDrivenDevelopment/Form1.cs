@@ -16,5 +16,42 @@ namespace TestDrivenDevelopment
         {
             InitializeComponent();
         }
+
+
+
+        private void submitButton_click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Side_A_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Side_B_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Side_C_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_A_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_B_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_C_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

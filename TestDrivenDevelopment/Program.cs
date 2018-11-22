@@ -6,12 +6,17 @@ using System.Windows.Forms;
 
 namespace TestDrivenDevelopment
 {
-    static class Program
+
+
+    public class Triangles
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+
+
+
+
+
         [STAThread]
+
         static void Main()
         {
             Application.EnableVisualStyles();
