@@ -38,21 +38,21 @@ namespace TestDrivenDevelopment
             }
 
 
-
+            //
 
 
 
 
             Triangles.sum_of_angles = Triangles.Angle_AB + Triangles.Angle_BC + Triangles.Angle_CA;
-            if(Triangles.sum_of_angles == 180)
-            {
-                Sum_Of_Angles_Box.Text = Triangles.sum_of_angles.ToString();
+            //if(Triangles.sum_of_angles == 180)
+            //{
+            //    Sum_Of_Angles_Box.Text = Triangles.sum_of_angles.ToString();
 
-                Triangles.Area = Triangles.Side_A + Triangles.Side_B + Triangles.Side_C;
-                AreaOfTriangle.Text = Triangles.Area.ToString();
+            //    Triangles.Area = Triangles.Side_A + Triangles.Side_B + Triangles.Side_C;
+            //    AreaOfTriangle.Text = Triangles.Area.ToString();
 
-            }
-            else if(Triangles.sum_of_angles < 180)
+            //}
+            if(Triangles.sum_of_angles < 180)
             {
                 if(Triangles.Angle_AB != 0 && Triangles.Angle_BC != 0 && Triangles.Angle_CA == 0)
                 {
@@ -88,9 +88,6 @@ namespace TestDrivenDevelopment
 
         }
 
-        private void AreaOfTriangle_Click(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }

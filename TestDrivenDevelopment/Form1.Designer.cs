@@ -51,12 +51,11 @@
             // Area_of_Triangle
             // 
             Area_of_Triangle.AutoSize = true;
-            Area_of_Triangle.Location = new System.Drawing.Point(530, 70);
+            Area_of_Triangle.Location = new System.Drawing.Point(500, 70);
             Area_of_Triangle.Name = "Area_of_Triangle";
-            Area_of_Triangle.Size = new System.Drawing.Size(177, 25);
+            Area_of_Triangle.Size = new System.Drawing.Size(165, 25);
             Area_of_Triangle.TabIndex = 10;
-            Area_of_Triangle.Text = "Area_of_Triangle";
-            Area_of_Triangle.Click += new System.EventHandler(this.AreaOfTriangle_Click);
+            Area_of_Triangle.Text = "Area of Triangle";
             // 
             // Side_Textbox_A
             // 
@@ -118,9 +117,9 @@
             // 
             // AreaOfTriangle
             // 
-            this.AreaOfTriangle.Location = new System.Drawing.Point(531, 127);
+            this.AreaOfTriangle.Location = new System.Drawing.Point(505, 127);
             this.AreaOfTriangle.Name = "AreaOfTriangle";
-            this.AreaOfTriangle.Size = new System.Drawing.Size(110, 31);
+            this.AreaOfTriangle.Size = new System.Drawing.Size(136, 31);
             this.AreaOfTriangle.TabIndex = 9;
             // 
             // Angle_AB_Label
