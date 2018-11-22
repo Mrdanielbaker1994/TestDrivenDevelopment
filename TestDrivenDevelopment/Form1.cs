@@ -21,11 +21,20 @@ namespace TestDrivenDevelopment
 
         private void submitButton_click(object sender, EventArgs e)
         {
+            Triangles.sum_of_angles = Triangles.Angle_AB + Triangles.Angle_BC + Triangles.Angle_CA;
+            if(Triangles.sum_of_angles == 180)
+            {
+            Sum_Of_Angles_Box.Text = Triangles.sum_of_angles.ToString();
+
             Triangles.Area = Triangles.Side_A + Triangles.Side_B + Triangles.Side_C;
             SumOfSidesBox.Text = Triangles.Area.ToString();
 
-            Triangles.sum_of_angles = Triangles.Angle_AB + Triangles.Angle_BC + Triangles.Angle_CA;
-            Sum_Of_Angles_Box.Text = Triangles.sum_of_angles.ToString();
+            }
+            else
+            {
+                MessageBox.Show("The sum of a triangle's angles may only equal 180 degrees.");
+            }
+
 
         }
 
