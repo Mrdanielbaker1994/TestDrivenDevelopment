@@ -86,7 +86,7 @@ namespace TestDrivenDevelopment
         }
         private void Angle_CA_TextChanged(object sender, EventArgs e)
         {
-            Triangles.Angle_BC = float.Parse(BC_Box.Text);
+            Triangles.Angle_CA = float.Parse(CA_Box.Text);
 
         }
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrivenDevelopment", "TestDrivenDevelopment\TestDrivenDevelopment.csproj", "{86B98A51-98A6-411C-BDE7-BA67FF09BB90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleUnitTest", "TriangleUnitTest\TriangleUnitTest.csproj", "{AA862AC5-CE6C-4C35-90DB-2739D3D511D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{86B98A51-98A6-411C-BDE7-BA67FF09BB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86B98A51-98A6-411C-BDE7-BA67FF09BB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86B98A51-98A6-411C-BDE7-BA67FF09BB90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA862AC5-CE6C-4C35-90DB-2739D3D511D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA862AC5-CE6C-4C35-90DB-2739D3D511D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA862AC5-CE6C-4C35-90DB-2739D3D511D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA862AC5-CE6C-4C35-90DB-2739D3D511D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
