@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Side_Textbox_A = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Side_Textbox_B = new System.Windows.Forms.TextBox();
+            this.Side_Textbox_C = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Side_Textbox_A
             // 
-            this.textBox1.Location = new System.Drawing.Point(5, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 31);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.Side_A_TextChanged);
+            this.Side_Textbox_A.Location = new System.Drawing.Point(5, 127);
+            this.Side_Textbox_A.Name = "Side_Textbox_A";
+            this.Side_Textbox_A.Size = new System.Drawing.Size(131, 31);
+            this.Side_Textbox_A.TabIndex = 0;
+            this.Side_Textbox_A.TextChanged += new System.EventHandler(this.Side_A_TextChanged);
             // 
             // button1
             // 
@@ -55,21 +55,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.submitButton_click);
             // 
-            // textBox2
+            // Side_Textbox_B
             // 
-            this.textBox2.Location = new System.Drawing.Point(162, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 31);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.Side_B_TextChanged);
+            this.Side_Textbox_B.Location = new System.Drawing.Point(162, 127);
+            this.Side_Textbox_B.Name = "Side_Textbox_B";
+            this.Side_Textbox_B.Size = new System.Drawing.Size(131, 31);
+            this.Side_Textbox_B.TabIndex = 4;
+            this.Side_Textbox_B.TextChanged += new System.EventHandler(this.Side_B_TextChanged);
             // 
-            // textBox3
+            // Side_Textbox_C
             // 
-            this.textBox3.Location = new System.Drawing.Point(317, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 31);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.Side_C_TextChanged);
+            this.Side_Textbox_C.Location = new System.Drawing.Point(317, 127);
+            this.Side_Textbox_C.Name = "Side_Textbox_C";
+            this.Side_Textbox_C.Size = new System.Drawing.Size(131, 31);
+            this.Side_Textbox_C.TabIndex = 5;
+            this.Side_Textbox_C.TextChanged += new System.EventHandler(this.Side_C_TextChanged);
             // 
             // label1
             // 
@@ -109,10 +109,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Side_Textbox_C);
+            this.Controls.Add(this.Side_Textbox_B);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Side_Textbox_A);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -122,10 +122,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Side_Textbox_A;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Side_Textbox_B;
+        private System.Windows.Forms.TextBox Side_Textbox_C;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

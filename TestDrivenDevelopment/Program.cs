@@ -8,10 +8,16 @@ namespace TestDrivenDevelopment
 {
 
 
-    public class Triangles
+    static public class Triangles
     {
 
-
+        static public float Area { get; set; }
+        static public float Side_A { get; set; }
+        static public float Side_B { get; set; }
+        static public float Side_C { get; set; }
+        static public float Angle_AB { get; set; }
+        static public float Angle_BC { get; set; }
+        static public float Angle_CA { get; set; }
 
 
 
