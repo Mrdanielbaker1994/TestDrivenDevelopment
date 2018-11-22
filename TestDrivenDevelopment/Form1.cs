@@ -21,25 +21,24 @@ namespace TestDrivenDevelopment
 
         private void submitButton_click(object sender, EventArgs e)
         {
-
         }
 
         private void Side_A_TextChanged(object sender, EventArgs e)
         {
-            Triangles.Side_A  = float.Parse(Side_Textbox_A.Text);
-            MessageBox.Show(Triangles.Side_A.ToString());
+            //Triangles.Side_A  = float.Parse(Side_Textbox_A.Text);
+            //MessageBox.Show(Triangles.Side_A.ToString());
         }
-        //
+        
         private void Side_B_TextChanged(object sender, EventArgs e)
         {
-            Triangles.Side_B = float.Parse(Side_Textbox_B.Text);
-            MessageBox.Show(Triangles.Side_B.ToString());
+            //Triangles.Side_B = float.Parse(Side_Textbox_B.Text);
+            //MessageBox.Show(Triangles.Side_B.ToString());
         }
 
         private void Side_C_TextChanged(object sender, EventArgs e)
         {
-            Triangles.Side_C = float.Parse(Side_Textbox_C.Text);
-            MessageBox.Show(Triangles.Side_C.ToString());
+            //Triangles.Side_C = float.Parse(Side_Textbox_C.Text);
+            //MessageBox.Show(Triangles.Side_C.ToString());
         }
 
         private void Label_A_Click(object sender, EventArgs e)

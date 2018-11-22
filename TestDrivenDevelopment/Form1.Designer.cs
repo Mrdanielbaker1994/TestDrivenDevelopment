@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label Sum;
             this.Side_Textbox_A = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Side_Textbox_B = new System.Windows.Forms.TextBox();
@@ -35,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.SumOfSides = new System.Windows.Forms.TextBox();
+            Sum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Side_Textbox_A
@@ -101,11 +104,29 @@
             this.label3.Text = "Side C";
             this.label3.Click += new System.EventHandler(this.Label_C_Click);
             // 
+            // SumOfSides
+            // 
+            this.SumOfSides.Location = new System.Drawing.Point(531, 127);
+            this.SumOfSides.Name = "SumOfSides";
+            this.SumOfSides.Size = new System.Drawing.Size(110, 31);
+            this.SumOfSides.TabIndex = 9;
+            // 
+            // Sum
+            // 
+            Sum.AutoSize = true;
+            Sum.Location = new System.Drawing.Point(543, 70);
+            Sum.Name = "Sum";
+            Sum.Size = new System.Drawing.Size(55, 25);
+            Sum.TabIndex = 10;
+            Sum.Text = "Sum";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(Sum);
+            this.Controls.Add(this.SumOfSides);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -129,6 +150,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox SumOfSides;
     }
 }
 
