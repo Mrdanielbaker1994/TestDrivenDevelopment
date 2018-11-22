@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.SumOfSides = new System.Windows.Forms.TextBox();
+            this.SumOfSidesBox = new System.Windows.Forms.TextBox();
             Sum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -104,12 +104,13 @@
             this.label3.Text = "Side C";
             this.label3.Click += new System.EventHandler(this.Label_C_Click);
             // 
-            // SumOfSides
+            // SumOfSidesBox
             // 
-            this.SumOfSides.Location = new System.Drawing.Point(531, 127);
-            this.SumOfSides.Name = "SumOfSides";
-            this.SumOfSides.Size = new System.Drawing.Size(110, 31);
-            this.SumOfSides.TabIndex = 9;
+            this.SumOfSidesBox.Location = new System.Drawing.Point(531, 127);
+            this.SumOfSidesBox.Name = "SumOfSidesBox";
+            this.SumOfSidesBox.Size = new System.Drawing.Size(110, 31);
+            this.SumOfSidesBox.TabIndex = 9;
+            this.SumOfSidesBox.TextChanged += new System.EventHandler(this.SumOfSides_TextChanged);
             // 
             // Sum
             // 
@@ -126,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(Sum);
-            this.Controls.Add(this.SumOfSides);
+            this.Controls.Add(this.SumOfSidesBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -150,7 +151,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox SumOfSides;
+        private System.Windows.Forms.TextBox SumOfSidesBox;
     }
 }
 
