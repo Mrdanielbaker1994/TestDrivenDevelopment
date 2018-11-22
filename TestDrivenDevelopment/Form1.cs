@@ -106,7 +106,7 @@ namespace TestDrivenDevelopment
             }
             return retValue;
         }
-
+        //
         public void determineIfRightAngle()
         {
             if(Triangles.Angle_AB == 90)
