@@ -29,7 +29,7 @@ namespace TestDrivenDevelopment
             Triangles.Side_A  = float.Parse(Side_Textbox_A.Text);
             MessageBox.Show(Triangles.Side_A.ToString());
         }
-
+        //
         private void Side_B_TextChanged(object sender, EventArgs e)
         {
             Triangles.Side_B = float.Parse(Side_Textbox_B.Text);
