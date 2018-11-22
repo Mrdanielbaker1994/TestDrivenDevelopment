@@ -62,5 +62,30 @@ namespace TestDrivenDevelopment
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void Angle_AB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void Angle_BC__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void Angle_CA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Angle_Submit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
