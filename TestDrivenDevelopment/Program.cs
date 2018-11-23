@@ -11,15 +11,16 @@ namespace TestDrivenDevelopment
     static public class Triangles
     {
 
-        static public float Area { get; set; }
-        static public float Side_A { get; set; }
-        static public float Side_B { get; set; }
-        static public float Side_C { get; set; }
-        static public float Angle_AB { get; set; }
-        static public float Angle_BC { get; set; }
-        static public float Angle_CA { get; set; }
-        static public float sum_of_angles { get; set; }
-        static public float heightOfTriangle { get; set; }
+        static public float Area { get; set; }            = 0;
+        static public float Side_A { get; set; }          = 0;
+        static public float Side_B { get; set; }          = 0;
+        static public float Side_C { get; set; }          = 0;
+        static public float Angle_AB { get; set; }        = 0;
+        static public float Angle_BC { get; set; }        = 0;
+        static public float Angle_CA { get; set; }        = 0;
+        static public float sum_of_angles { get; set; }   = 0;
+        static public float heightOfTriangle { get; set;} = 0;
+        static public float areaOfTriangle { get; set; }  = 0;
 
 
 
@@ -30,7 +31,7 @@ namespace TestDrivenDevelopment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new TriangleCalculator());
         }
     }
 }
