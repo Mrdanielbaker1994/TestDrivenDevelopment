@@ -6,6 +6,7 @@ namespace TestDrivenDevelopment
     public partial class TriangleCalculator : Form
     {
         /*
+         * 
         FUNCTION: TriangleCalculator()
         DESCRIPTION: This method is used to call
         InitializeCoponent() which is a method used to 
