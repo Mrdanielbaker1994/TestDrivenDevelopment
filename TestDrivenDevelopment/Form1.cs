@@ -223,6 +223,20 @@ namespace TestDrivenDevelopment
             }
         }
 
+
+        /*
+        FUNCTION: calculateSides()
+        DESCRIPTION:string hypotenuse , string emptySide
+        PARAMETERS : This method holds all the logic to solve the 
+        triangles hypoteneuse and area. It takes in two arguments as
+        strings. The first is called "hypotenuse" which describes which
+        side of the triangle is the hypotenuse. The second argument
+        is the side of the triangle that is emtpy (if any). Using these
+        two values, combined with another known side, I'm able to calcaulate
+        thea area of the triangle.
+        RETURNS : VOID
+        Author: Daniel Baker
+        */
         void calculateSides(string hypotenuse , string emptySide)
         {
             
@@ -443,6 +457,16 @@ namespace TestDrivenDevelopment
 
 
         }
+        /*
+        FUNCTION: ClearValues()
+        DESCRIPTION: This method handles the click event for pressing
+        the "clear" button on the form. It calls a method called ClearValues()
+        which is used to clear the values from the text boxes. This is aimed
+        at making the program more user friendly.
+        PARAMETERS : object sender, EventArgs e		
+        RETURNS : VOID
+        Author: Daniel Baker
+        */
         public void ClearValues()
         {
             Triangles.Angle_AB = 0;
@@ -463,6 +487,17 @@ namespace TestDrivenDevelopment
 
         }
 
+
+        /*
+        FUNCTION: ClearValues_Click()
+        DESCRIPTION: This method handles the click event for pressing
+        the "clear" button on the form. It calls a method called ClearValues()
+        which is used to clear the values from the text boxes. This is aimed
+        at making the program more user friendly.
+        PARAMETERS : object sender, EventArgs e		
+        RETURNS : VOID
+        Author: Daniel Baker
+        */
         private void ClearValues_Click(object sender, EventArgs e)
         {
             ClearValues();
