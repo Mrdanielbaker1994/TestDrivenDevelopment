@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+* FILE : Form.cs
+* PROJECT :Assignment 2 - Software Quality
+* PROGRAMMER : Daniel Baker
+* FIRST VERSION : 2018-11-21
+* DESCRIPTION : This file contains all the necessary
+* logic used to calculate the right angle triangle's 
+* lengths, angles and area. The data members used to store
+* the information about the triangle are drawn from the Program.cs
+* file.
+*/
+using System;
 using System.Windows.Forms;
 
 namespace TestDrivenDevelopment
@@ -20,6 +31,16 @@ namespace TestDrivenDevelopment
 
             InitializeComponent();
             ClearValues();
+        }
+
+        public float sumOfSides(float sideA , float sideB, float sideC)
+        {
+            Triangles.Side_A = sideA;
+            Triangles.Side_B = sideB;
+            Triangles.Side_C = sideC;
+            float sumOfSides = Triangles.Side_A + Triangles.Side_B + Triangles.Side_C;
+
+            return sumOfSides;
         }
 
         /*
@@ -63,26 +84,36 @@ namespace TestDrivenDevelopment
         RETURNS : VOID
         Author: Daniel Baker
         */
-        public void calculateSum()
+        public float calculateSum()
         {
             Triangles.sum_of_angles = Triangles.Angle_AB + Triangles.Angle_BC + Triangles.Angle_CA;
             Sum_Of_Angles_Box.Text = Triangles.sum_of_angles.ToString();
+
+            float retValue = Triangles.sum_of_angles;
+            return retValue;
+        }
+
+        public float calculateSumTest(float A , float B, float C)
+        {
+            float retValue = A + B + C;
+
+            return retValue;
         }
 
 
-        /*
-        FUNCTION: anglesInRange()
-        DESCRIPTION: This method is used to determine
-        if the sum of all angles equals 180 degrees and 
-        also ensuring that t least one of the angles is 90 degrees
-        so that we are working with a right angle triangle. Upon
-        success this method returns true.
-        PARAMETERS : VOID		
-        RETURNS : bool
-        Author: Daniel Baker
-        */
-        public bool anglesInRange()
-        {
+            /*
+            FUNCTION: anglesInRange()
+            DESCRIPTION: This method is used to determine
+            if the sum of all angles equals 180 degrees and 
+            also ensuring that t least one of the angles is 90 degrees
+            so that we are working with a right angle triangle. Upon
+            success this method returns true.
+            PARAMETERS : VOID		
+            RETURNS : bool
+            Author: Daniel Baker
+            */
+            public bool anglesInRange()
+            {
             bool retValue = false;
             Triangles.sum_of_angles = Triangles.Angle_AB + Triangles.Angle_BC + Triangles.Angle_CA;
             if (Triangles.sum_of_angles == 180 && Triangles.Angle_AB != 0 && Triangles.Angle_BC != 0 && Triangles.Angle_CA != 0)
@@ -201,8 +232,9 @@ namespace TestDrivenDevelopment
         RETURNS : VOID
         Author: Daniel Baker
         */
-        public void determineIfRightAngle(string emtpySide)
+        public string determineIfRightAngle(string emtpySide)
         {
+            string retValue = "ok";
             if (Triangles.Angle_BC == 90)
             {
                 calculateSides("SideA", emtpySide);
@@ -220,7 +252,10 @@ namespace TestDrivenDevelopment
             else
             {
                 MessageBox.Show("This calculator only works for right angle triangles.");
+                retValue = "rightAngleTrianglesOnly";
             }
+            return retValue;
+
         }
 
 
@@ -237,19 +272,24 @@ namespace TestDrivenDevelopment
         RETURNS : VOID
         Author: Daniel Baker
         */
-        void calculateSides(string hypotenuse , string emptySide)
+        public float calculateSides(string hypotenuse , string emptySide)
         {
-            
+            float retValue = 0;
             if(emptySide == hypotenuse)
             {
                 if(hypotenuse == "SideA")
                 {
+                    //Triangles.Side_B = 3;
+                    //Triangles.Side_C = 4;
                     Triangles.areaOfTriangle = Triangles.Side_C * Triangles.Side_B * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
 
                     float temp = (float)Math.Sqrt((float)Math.Pow(Triangles.Side_C, 2) + (float)Math.Pow(Triangles.Side_B, 2));
                     Triangles.Side_A = (float)(temp);
                     Side_Textbox_A.Text = Triangles.Side_A.ToString();
+                    retValue = temp;
+                    MessageBox.Show(Triangles.areaOfTriangle.ToString());
+
 
                 }
                 else if (hypotenuse == "SideB")
@@ -261,6 +301,7 @@ namespace TestDrivenDevelopment
                     float temp = (float)Math.Sqrt((float)Math.Pow(Triangles.Side_A, 2) + (float)Math.Pow(Triangles.Side_C, 2));
                     Triangles.Side_B = (float)(temp);
                     Side_Textbox_B.Text = Triangles.Side_B.ToString();
+                    retValue =  temp;
 
 
                 }
@@ -274,6 +315,7 @@ namespace TestDrivenDevelopment
                     float temp = (float)Math.Sqrt((float)Math.Pow(Triangles.Side_A, 2) + (float)Math.Pow(Triangles.Side_B, 2));
                     Triangles.Side_C = (temp);
                     Side_Textbox_C.Text = Triangles.Side_C.ToString();
+                    retValue = temp;
 
                 }
 
@@ -291,6 +333,7 @@ namespace TestDrivenDevelopment
 
                     Triangles.areaOfTriangle = Triangles.Side_A * Triangles.Side_C * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue = temp;
 
 
 
@@ -305,6 +348,7 @@ namespace TestDrivenDevelopment
 
                     Triangles.areaOfTriangle = Triangles.Side_A * Triangles.Side_B * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue = temp;
 
 
                 }
@@ -329,6 +373,7 @@ namespace TestDrivenDevelopment
 
                     Triangles.areaOfTriangle = Triangles.Side_B * Triangles.Side_C * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue = temp;
 
                 }
                 else if (hypotenuse == "SideC")
@@ -340,6 +385,7 @@ namespace TestDrivenDevelopment
 
                     Triangles.areaOfTriangle = Triangles.Side_A * Triangles.Side_C * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue=  temp;
 
                 }
 
@@ -358,6 +404,7 @@ namespace TestDrivenDevelopment
 
                     Triangles.areaOfTriangle = Triangles.Side_B * Triangles.Side_C * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue = temp;
 
 
                 }
@@ -371,6 +418,7 @@ namespace TestDrivenDevelopment
 
                     Triangles.areaOfTriangle = Triangles.Side_A * Triangles.Side_C * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    return temp;
 
                 }
 
@@ -382,23 +430,27 @@ namespace TestDrivenDevelopment
                 {
                     Triangles.areaOfTriangle = Triangles.Side_B * Triangles.Side_C * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue =  0;
 
                 }
                 else if (hypotenuse == "SideB")
                 {
                     Triangles.areaOfTriangle = Triangles.Side_A * Triangles.Side_C * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue = 0;
 
                 }
                 else if (hypotenuse == "SideC")
                 {
                     Triangles.areaOfTriangle = Triangles.Side_A * Triangles.Side_B * (float)0.5;
                     AreaOfTriangleBox.Text = Triangles.areaOfTriangle.ToString();
+                    retValue = 0;
 
                 }
+
             }
 
-
+            return retValue;
 
 
 
